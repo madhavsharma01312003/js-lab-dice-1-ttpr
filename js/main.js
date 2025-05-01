@@ -3,6 +3,7 @@ let dice = {
   roll: function () {
   let randomNumber;
   // Write Code Here
+  randomNumber = Math.floor(Math.random() * this.sides) + 1;
   // Generate a random number between 1 and the number of sides and assign it to randomNumber
 
    return (randomNumber);
@@ -10,8 +11,8 @@ let dice = {
 };
 
 function printNumber(number) {
-  let placeholder = document.getElementById("placeholder");
-  placeholder.innerHTML = number;
+  let diceImage = document.getElementById("diceImage");
+  diceImage.src = "img/dice" + number + ".png";
 }
 
 const button = document.getElementById("button");
